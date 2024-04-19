@@ -6,17 +6,15 @@ type TraitDropdownProps = {
 };
 
 const TraitDropdown = ({ options }: TraitDropdownProps) => {
-const router = useRouter()
+  const router = useRouter()
   const [selectedOption, setSelectedOption] = useState("");
   const [inputValue, setInputValue] = useState("");
 
-  const onSelect =()=>{
+  const onSelect = () => {
     router.push(
-        `/cats?trait=${selectedOption}&value=${inputValue}`
-      );
+      `/cats?trait=${selectedOption}&value=${inputValue}`
+    );
   }
-
-  // `https://nextjs-cats-app.vercel.app/cats?trait=${selectedOption}&value=${inputValue}`
 
   return (
     <div className="p-4 space-y-4 bg-gray-300 rounded-lg shadow-md md:w-1/4 mx-auto mb-4">
